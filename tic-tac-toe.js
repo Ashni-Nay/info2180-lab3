@@ -37,7 +37,7 @@ function playerX(placeX){
     placeX.innerHTML="X";
 }
 
-function playerO (placeO){
+function playerO(placeO){
     placeO.className="square O";
     placeO.innerHTML="O";
 }
@@ -100,10 +100,18 @@ function congratulations(winner){
 
 }
 
-/*function hover(square){
+function chooseWinner(){
+    if(arry.length>4){
+        let congrats=winnerPlay();
+        congratulations(congrats);
+    }   
+}
+
+function hover(square){
     square.addEventListener("mouseover",function(){
         square.classList.add("hover");
     });
     square.addEventListener("mouseout", function (){
         square.classList.remove("hover");
-    }); */
+    });
+}
