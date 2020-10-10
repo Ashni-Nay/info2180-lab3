@@ -84,6 +84,22 @@ function winnerPlay(){
     }
 }
 
+function congratulations(winner){    
+    document.getElementById("status").textContent;
+    if (winner==="X"){
+        document.getElementById("status").textContent="Congratulations! X is the Winner!" ;
+        document.getElementById("status").className="you-won"; 
+        endGame=true;
+    }else if (winner==="O"){
+        document.getElementById("status").textContent="Congratulations! O is the Winner!" ;
+        document.getElementById("status").className="you-won";
+        endGame=true;
+    }else{
+            document.getElementById("status").textContent="It's a Tie!";
+    }
+
+}
+
 /*function hover(square){
     square.addEventListener("mouseover",function(){
         square.classList.add("hover");
