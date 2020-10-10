@@ -61,3 +61,33 @@ function clickevent(event){
     });
 }
 
+function winnerPlay(){
+    let win;
+    if (play[0].innerHTML !=="" && play[0].innerHTML === play[1].innerHTML && play[0].innerHTML === play[2].innerHTML) {
+        return win=play[0].innerHTML;
+    } else if (play[6].innerHTML !=="" && play[6].innerHTML === play[3].innerHTML && play[6].innerHTML === play[0].innerHTML) {
+        return win=play[0].innerHTML ;
+    } else if (play[7].innerHTML !=="" && play[7].innerHTML === play[6].innerHTML && play[7].innerHTML === play[8].innerHTML) {
+        return win=play[7].innerHTML;
+    } else if (play[8].innerHTML !==""&& play[8].innerHTML === play[2].innerHTML && play[8].innerHTML === play[5].innerHTML) {
+        return win=play[5].innerHTML;
+    } else if (play[1].innerHTML !=="" && play[1].innerHTML === play[4].innerHTML && play[1].innerHTML === play[7].innerHTML) {
+        return win=play[1].innerHTML;
+    } else if (play[4].innerHTML !=="" && play[4].innerHTML === play[0].innerHTML && play[4].innerHTML === play[8].innerHTML) {
+        return win=play[0].innerHTML;
+    } else if (play[2].innerHTML !=="" && play[2].innerHTML === play[4].innerHTML && play[2].innerHTML === play[6].innerHTML) {
+        return win=play[2].innerHTML;
+    } else if (play[5].innerHTML !=="" && play[5].innerHTML === play[4].innerHTML && play[3].innerHTML === play[5].innerHTML) {
+        return win=play[3].innerHTML;
+    } else {
+        return win;
+    }
+}
+
+/*function hover(square){
+    square.addEventListener("mouseover",function(){
+        square.classList.add("hover");
+    });
+    square.addEventListener("mouseout", function (){
+        square.classList.remove("hover");
+    }); */
