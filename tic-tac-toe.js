@@ -93,7 +93,7 @@ function checkPlay(){
     }
 }
 
-function congratulations(winner){    
+function winningMsg(winner){    
     document.getElementById("status").textContent;
     if (winner==="X"){
         document.getElementById("status").textContent="Congratulations! X is the Winner!" ;
@@ -112,15 +112,6 @@ function congratulations(winner){
 function chooseWinner(){
     if(arry.length>4){
         let congrats=checkPlay();
-        congratulations(congrats);
+        winningMsg(congrats);
     }   
 }
-
-/*function hover(square){
-    square.addEventListener("mouseover",function(){
-        square.classList.add("hover");
-    });
-    square.addEventListener("mouseout", function (){
-        square.classList.remove("hover");
-    });
-}*/
