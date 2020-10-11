@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded",() => {
 }); 
 
 function newGame(){
-    document.addEventListener('click', function (event) {
+    document.addEventListener("click", function (event) {
         if (event.target.matches('.btn')) {
             document.getElementById("status").classList.remove("you-won");
             document.getElementById("status").innerHTML ="Move your mouse over a square and click to play an X or an O.";
@@ -55,13 +55,22 @@ function playXorO(event){
     }
 }
 
+function hover(square){
+    square.addEventListener("mouseover",function(){
+        square.classList.add("hover");
+    });
+    square.addEventListener("mouseout", function (){
+        square.classList.remove("hover");
+    });
+}
+
 function clickevent(event){
     event.addEventListener("click",function (){
         playXorO(event);
     });
 }
 
-function winnerPlay(){
+function checkPlay(){
     let win;
     if (play[0].innerHTML !=="" && play[0].innerHTML === play[1].innerHTML && play[0].innerHTML === play[2].innerHTML) {
         return win=play[0].innerHTML;
@@ -102,16 +111,16 @@ function congratulations(winner){
 
 function chooseWinner(){
     if(arry.length>4){
-        let congrats=winnerPlay();
+        let congrats=checkPlay();
         congratulations(congrats);
     }   
 }
 
-function hover(square){
+/*function hover(square){
     square.addEventListener("mouseover",function(){
         square.classList.add("hover");
     });
     square.addEventListener("mouseout", function (){
         square.classList.remove("hover");
     });
-}
+}*/
